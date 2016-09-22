@@ -1,0 +1,11 @@
+fhd = @fitness;
+%fhd = @Rastrigin;
+Max_Gen = 5000;
+Max_FES = 100000;
+Particle_Number = 30;
+Dimension = 2;
+VRmin = [-5 -5];
+VRmax = [5 5];
+load('data.mat');
+varargin = data;
+[gbest,gbestval,fitcount]= CLPSO_new_func(fhd,Max_Gen,Max_FES,Particle_Number,Dimension,VRmin,VRmax,varargin);
